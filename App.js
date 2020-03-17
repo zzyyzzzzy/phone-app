@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
 import Header from './component/Header';
 import {uuid} from 'uuidv4';
 
 const App = () => {
-  const [item, setItem] = useState([
+  const [items, setItem] = useState([
     {id: 1, text: 'Milk'},
     {id: 2, text: 'Eggs'},
     {id: 3, text: 'Coke'},
@@ -13,6 +13,10 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header />
+      <FlatList
+        data={items}
+        renderItem={({item}) => <Text>{item.text}</Text>}
+      />
     </View>
   );
 };
