@@ -22,6 +22,10 @@ const AddItem = props => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  input: {},
+  btn: {},
+  btnText: {},
+});
 
 export default AddItem;
