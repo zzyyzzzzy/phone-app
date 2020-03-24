@@ -18,7 +18,7 @@ const AddItem = props => {
         style={styles.input}
         onChangeText={onChange}
       />
-      <TouchableOpacity style={styles.btn}>
+      <TouchableOpacity style={styles.btn} onPress={() => props.addItem(text)}>
         <Text style={styles.btnText}>
           {' '}
           <Icon name="plus" size={20} />
