@@ -18,6 +18,11 @@ const App = () => {
       return prevItem.filter(item => item.id !== id);
     });
   };
+  const addItem = itemText => {
+    setItem(prevItem => {
+      return [...prevItem, {id: prevItem.length + 1, text: itemText}];
+    });
+  };
   return (
     <View style={styles.container}>
       <Header />
